@@ -1,0 +1,61 @@
+---
+import { SERVICES } from "../../data/services";
+
+import Container from "../ui/Container.astro";
+
+import Card from "../ui/Card.astro";
+
+import SectionHeader from "../ui/SectionHeader.astro";
+---
+
+<section id="services">
+
+<Container>
+
+<SectionHeader
+
+badge="Servicios"
+
+title="Creamos software pensado para crecer."
+
+description="Nos enfocamos en desarrollar soluciones modernas con tecnologías rápidas, escalables y fáciles de mantener."
+
+/>
+
+<div class="services-grid">
+
+{
+
+SERVICES.map(service=>(
+
+<Card>
+
+<div class="service-icon">
+
+{service.icon}
+
+</div>
+
+<h3>
+
+{service.title}
+
+</h3>
+
+<p>
+
+{service.description}
+
+</p>
+
+</Card>
+
+))
+
+}
+
+</div>
+
+</Container>
+
+</section>

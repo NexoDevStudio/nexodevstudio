@@ -1,0 +1,77 @@
+---
+import Container from "../ui/Container.astro";
+import SectionHeader from "../ui/SectionHeader.astro";
+
+const FEATURES = [
+  {
+    number: "01",
+    title: "Código limpio",
+    description:
+      "Escribimos software mantenible, escalable y fácil de evolucionar."
+  },
+  {
+    number: "02",
+    title: "Alto rendimiento",
+    description:
+      "Nuestros proyectos cargan rápido y están optimizados desde el inicio."
+  },
+  {
+    number: "03",
+    title: "SEO desde el primer día",
+    description:
+      "La estructura está preparada para posicionarse correctamente en Google."
+  },
+  {
+    number: "04",
+    title: "Tecnologías modernas",
+    description:
+      "Trabajamos con herramientas actuales para crear productos duraderos."
+  }
+];
+---
+
+<section id="trust">
+
+    <Container>
+
+        <SectionHeader
+            badge="¿Por qué NexoDevStudio?"
+            title="Construimos software con estándares profesionales desde el primer proyecto."
+            description="Todavía estamos escribiendo nuestra historia, pero cada línea de código refleja la calidad con la que queremos ser reconocidos."
+        />
+
+        <div class="trust-grid">
+
+            {
+                FEATURES.map((feature) => (
+
+                    <article class="trust-card">
+
+                        <span class="trust-number">
+
+                            {feature.number}
+
+                        </span>
+
+                        <h3>
+
+                            {feature.title}
+
+                        </h3>
+
+                        <p>
+
+                            {feature.description}
+
+                        </p>
+
+                    </article>
+
+                ))
+            }
+
+        </div>
+
+    </Container>
+
+</section>

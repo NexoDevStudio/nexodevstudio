@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+:root {
+    /* Colors */
+    --background: #09090b;
+    --surface: #111113;
+    --surface-2: #18181b;
+
+    --text: #fafafa;
+    --muted: #a1a1aa;
+
+    --border: rgba(255, 255, 255, .08);
+
+    --primary: #8b5cf6;
+    --primary-hover: #7c3aed;
+
+    --secondary: #22d3ee;
+
+    /* Radius */
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    /* Shadow */
+
+    --shadow:
+        0 10px 30px rgba(0, 0, 0, .25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: Inter, sans-serif;
+
+    overflow-x: hidden;
+
+}
+
+::selection {
+
+    background: var(--primary);
+
+    color: white;
+
+}
+
+.container {
+
+    width: min(1200px, 90%);
+
+    margin: auto;
+
+}
+
+section {
+
+    padding: 120px 0;
+
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.grid-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+}
+
+.grid-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+
+    background-size: 48px 48px;
+
+    mask-image: radial-gradient(circle at center, black 40%, transparent 95%);
+
+}
+
+/* ===========================
+   GLOW
+=========================== */
+
+.glow {
+
+    position: absolute;
+
+    width: 700px;
+
+    height: 700px;
+
+    border-radius: 9999px;
+
+    filter: blur(140px);
+
+    opacity: .18;
+
+}
+
+.glow-purple {
+
+    background: #7c3aed;
+
+    top: -180px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+.glow-cyan {
+
+    background: #06b6d4;
+
+    bottom: -300px;
+
+    right: -180px;
+
+}
+
+/* ===========================
+   NOISE
+=========================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

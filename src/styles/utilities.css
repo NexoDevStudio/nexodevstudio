@@ -1,0 +1,130 @@
+/* ==========================================
+CONTAINER
+========================================== */
+
+.container {
+    width: min(1200px, 92%);
+    margin-inline: auto;
+}
+
+/* ==========================================
+SECTIONS
+========================================== */
+
+section {
+    padding: 120px 0;
+}
+
+/* ==========================================
+GLASS
+========================================== */
+
+.glass {
+    background: rgba(255, 255, 255, .04);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .08);
+}
+
+/* ==========================================
+GRADIENT TEXT
+========================================== */
+
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #06b6d4
+    );
+
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* ==========================================
+BACKGROUND GRID
+========================================== */
+
+.grid-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 48px 48px;
+
+    mask-image:
+        radial-gradient(
+            circle at center,
+            black 40%,
+            transparent 95%
+        );
+}
+
+/* ==========================================
+GLOWS
+========================================== */
+
+.glow {
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border-radius: 9999px;
+
+    filter: blur(140px);
+
+    opacity: .18;
+}
+
+.glow-purple {
+    background: #8b5cf6;
+
+    top: -180px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.glow-cyan {
+    background: #06b6d4;
+
+    bottom: -300px;
+
+    right: -180px;
+}
+
+/* ==========================================
+NOISE
+========================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.015'/%3E%3C/svg%3E");
+
+    pointer-events: none;
+
+    z-index: -1;
+}
