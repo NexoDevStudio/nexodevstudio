@@ -1,0 +1,39 @@
+---
+import Container from "../ui/Container.astro";
+import Badge from "../ui/Badge.astro";
+import Button from "../ui/Button.astro";
+import { CTA } from "../../data/cta";
+---
+
+<section id="cta">
+
+    <Container>
+
+        <div class="cta-box">
+
+            <Badge text={CTA.badge} />
+
+            <h2>{CTA.title}</h2>
+
+            <p>{CTA.description}</p>
+
+            <div class="cta-buttons">
+
+                <Button href={CTA.primaryButton.href}>
+                    {CTA.primaryButton.text}
+                </Button>
+
+                <a
+                    href={CTA.secondaryButton.href}
+                    class="cta-secondary"
+                >
+                    {CTA.secondaryButton.text}
+                </a>
+
+            </div>
+
+        </div>
+
+    </Container>
+
+</section>
