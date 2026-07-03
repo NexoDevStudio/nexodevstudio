@@ -389,7 +389,8 @@ TRUST
 .trust-title {
     font-size: 1.25rem;
     margin: .5rem 0 1rem;
-    color: #8e56f7;
+    /* color: #a78bfa; */
+    color: #c4b5fd;
 }
 
 .trust-description {
@@ -999,13 +1000,11 @@ BUTTON
 
 .btn-secondary {
 
-    color: #ffffff;
+    color: white;
 
-    background: rgba(255, 255, 255, .03);
+    background: rgba(255, 255, 255, .06);
 
-    border: 1px solid rgba(255, 255, 255, .12);
-
-    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .18);
 
 }
 
