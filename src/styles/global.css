@@ -9,7 +9,7 @@
     --surface-2: #18181b;
 
     --text: #fafafa;
-    --muted: #a1a1aa;
+    --muted: #d4d4d8;
 
     --border: rgba(255, 255, 255, .08);
 
@@ -40,6 +40,12 @@ body {
     color: var(--text);
     font-family: Inter, sans-serif;
     overflow-x: hidden;
+    line-height: 1.6;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
 }
 
 img {
