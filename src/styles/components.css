@@ -394,9 +394,9 @@ TRUST
 
 .trust-description {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.7;
-    color: var(--muted);
+    color: #d4d4d8
 }
 
 .trust-card {
@@ -404,7 +404,7 @@ TRUST
 
     border-radius: 24px;
 
-    background: rgba(255, 255, 255, .03);
+    background: rgba(255, 255, 255, 0.045);
 
     border: 1px solid rgba(255, 255, 255, .06);
 
@@ -999,11 +999,11 @@ BUTTON
 
 .btn-secondary {
 
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 
-    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, .03);
 
-    background: rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, .12);
 
     backdrop-filter: blur(18px);
 
@@ -1015,7 +1015,7 @@ BUTTON
 
     border-color: rgba(139, 92, 246, .45);
 
-    background: rgba(255, 255, 255, .06);
+    background: rgba(255, 255, 255, .08);
 
 }
 
