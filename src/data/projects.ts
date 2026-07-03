@@ -7,21 +7,17 @@ export const PROJECTS: Project[] = [
     category: "Aplicación Web",
 
     description:
-      "Dashboard para visualizar métricas de negocio con una interfaz moderna y rápida.",
+      "Plataforma de analítica empresarial con métricas en tiempo real, reportes interactivos y visualización de indicadores clave para la toma de decisiones.",
 
-    image: "/projects/dashboard.webp",
+    image: "/images/projects/dashboard.png",
 
     technologies: [
       "Astro",
-      "Tailwind",
       "TypeScript",
+      "Tailwind CSS",
       "Supabase"
     ],
-
-    github: "#",
-
-    demo: "#",
-
+    action: "#cta",
     featured: true
   },
 
@@ -31,18 +27,17 @@ export const PROJECTS: Project[] = [
     category: "Landing Page",
 
     description:
-      "Landing enfocada en conversión con excelente rendimiento y SEO.",
+      "Landing moderna optimizada para conversión, alto rendimiento y SEO, diseñada para presentar productos digitales y captar nuevos clientes.",
 
-    image: "/projects/landing.webp",
+    image: "/images/projects/landing.png",
 
     technologies: [
       "Astro",
-      "Tailwind"
+      "Tailwind CSS",
+      "TypeScript"
     ],
 
-    github: "#",
-
-    demo: "#",
+    action: "#cta",
 
     featured: true
   },
@@ -50,22 +45,42 @@ export const PROJECTS: Project[] = [
   {
     title: "Sistema POS",
 
-    category: "Software",
+    category: "Software Empresarial",
 
     description:
-      "Sistema administrativo para pequeños negocios con inventario y ventas.",
+      "Sistema POS para la gestión de ventas, inventario y clientes, desarrollado con una interfaz intuitiva para pequeños y medianos negocios.",
 
-    image: "/projects/pos.webp",
+    image: "/images/projects/pos.png",
 
     technologies: [
-      "Node",
+      "Node.js",
       "PostgreSQL",
-      "Tailwind"
+      "Tailwind CSS"
     ],
 
-    github: "#",
+    action: "#cta",
 
-    demo: "#",
+    featured: false
+  },
+
+  {
+    title: "AI Workspace",
+
+    category: "Inteligencia Artificial",
+
+    description:
+      "Espacio de trabajo impulsado por IA con chat inteligente, automatización de tareas, base de conocimiento y panel de métricas para equipos modernos.",
+
+    image: "/images/projects/AIwork.png",
+
+    technologies: [
+      "OpenAI API",
+      "Node.js",
+      "PostgreSQL",
+      "Tailwind CSS"
+    ],
+
+    action: "#cta",
 
     featured: false
   }

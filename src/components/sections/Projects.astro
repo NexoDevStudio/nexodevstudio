@@ -9,37 +9,15 @@ import { PROJECTS } from "../../data/projects";
 ---
 
 <section id="projects">
+    <Container>
+        <SectionHeader
+            badge="Portafolio"
+            title="Algunos proyectos que representan nuestra forma de construir software."
+            description="Mientras llegan nuestros primeros clientes seguimos creando productos propios para demostrar nuestra capacidad técnica."
+        />
 
-<Container>
-
-<SectionHeader
-
-badge="Portafolio"
-
-title="Algunos proyectos que representan nuestra forma de construir software."
-
-description="Mientras llegan nuestros primeros clientes seguimos creando productos propios para demostrar nuestra capacidad técnica."
-
-/>
-
-<div class="projects-grid">
-
-{
-
-PROJECTS.map(project=>(
-
-<ProjectCard
-
-project={project}
-
-/>
-
-))
-
-}
-
-</div>
-
-</Container>
-
+        <div class="projects-grid">
+            {PROJECTS.map((project) => <ProjectCard project={project} />)}
+        </div>
+    </Container>
 </section>

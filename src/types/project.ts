@@ -9,9 +9,7 @@ export interface Project {
 
   technologies: string[];
 
-  github?: string;
-
-  demo?: string;
+  action?: string;
 
   featured?: boolean;
 }

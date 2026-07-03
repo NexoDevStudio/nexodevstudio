@@ -13,8 +13,7 @@ export const FOOTER = {
   socials: [
     {
       name: "GitHub",
-      // url: "https://github.com/nexodevstudio"
-      url: "#hero"
+      url: "https://github.com/NexoDevStudio"
     },
     {
       name: "LinkedIn",

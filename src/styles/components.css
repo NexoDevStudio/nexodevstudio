@@ -309,11 +309,18 @@ PROJECTS
 }
 
 .project-links a {
+    padding: .45rem .8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.116);
+    color: #8b5cf6;
+    font-weight: 600;
+    text-decoration: none;
     transition: .3s;
 }
 
 .project-links a:hover {
-    color: #8b5cf6;
+    color: #202020;
+    background: rgba(138, 92, 246, 0.63);
 }
 
 .project-placeholder {
