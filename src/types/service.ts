@@ -1,9 +1,9 @@
-export interface Service{
+export interface Service {
 
-    title:string;
+    title: string;
 
-    description:string;
+    description: string;
 
-    icon:string;
+    icon: any;
 
 }

@@ -2,7 +2,7 @@ export const FOOTER = {
   description:
     "Construimos productos digitales rápidos, escalables y preparados para crecer.",
 
-  email: "hola@nexodevstudio.com",
+  email: "contacto@nexodevstudio.com",
 
   location: "Andes, Antioquia · Colombia",
 
@@ -28,15 +28,18 @@ export const FOOTER = {
   socials: [
     {
       name: "GitHub",
-      url: "#"
+      // url: "https://github.com/nexodevstudio"
+      url: "#hero"
     },
     {
       name: "LinkedIn",
-      url: "#"
+      // url: "https://co.linkedin.com/company/nexodevstudio"
+      url: "#hero"
     },
     {
       name: "Instagram",
-      url: "#"
+      // url: "https://www.instagram.com/nexo_devstudio/"
+      url: "#hero"
     }
   ]
 };

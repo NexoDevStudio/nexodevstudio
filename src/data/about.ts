@@ -1,14 +1,14 @@
 export const ABOUT = {
-  badge: "Nuestra filosofía",
+  badge: "Quiénes somos",
 
-  title: "Construimos productos digitales con visión de largo plazo.",
+  title: "Construimos productos digitales preparados para crecer.",
 
   paragraphs: [
-    "En NexoDevStudio creemos que el software no debe limitarse a funcionar. Debe resolver problemas reales, ser fácil de usar y estar preparado para crecer.",
+    "En NexoDevStudio desarrollamos software moderno con un enfoque en rendimiento, mantenibilidad y experiencia de usuario.",
 
-    "Cada proyecto es una oportunidad para combinar diseño, desarrollo y estrategia en una solución que genere valor desde el primer día.",
+    "Cada proyecto se construye con una arquitectura sólida para facilitar su evolución y reducir costos de mantenimiento.",
 
-    "Aunque nuestra historia apenas comienza, nuestro compromiso con la calidad está presente en cada decisión técnica que tomamos."
+    "Nuestro objetivo es entregar soluciones rápidas, escalables y listas para acompañar el crecimiento de cada negocio."
   ],
 
   stats: [
@@ -17,8 +17,8 @@ export const ABOUT = {
       label: "Compromiso"
     },
     {
-      value: "24/7",
-      label: "Aprendizaje"
+      value: "Clean",
+      label: "Código mantenible"
     },
     {
       value: "∞",

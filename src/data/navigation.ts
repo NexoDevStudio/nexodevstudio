@@ -1,43 +1,43 @@
-export const NAVIGATION=[
+export const NAVIGATION = [
 
-{
+    {
 
-label:"Inicio",
+        label: "Inicio",
 
-href:"#hero"
+        href: "#hero"
 
-},
+    },
 
-{
+    {
 
-label:"Servicios",
+        label: "Servicios",
 
-href:"#services"
+        href: "#services"
 
-},
+    },
 
-{
+    {
 
-label:"Proyectos",
+        label: "Proyectos",
 
-href:"#projects"
+        href: "#projects"
 
-},
+    },
 
-{
+    {
 
-label:"Proceso",
+        label: "Proceso",
 
-href:"#process"
+        href: "#process"
 
-},
+    },
 
-{
+    {
 
-label:"Contacto",
+        label: "Contacto",
 
-href:"#contact"
+        href: "#cta"
 
-}
+    }
 
 ]

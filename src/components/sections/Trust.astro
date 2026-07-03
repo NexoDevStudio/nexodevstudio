@@ -2,76 +2,68 @@
 import Container from "../ui/Container.astro";
 import SectionHeader from "../ui/SectionHeader.astro";
 
-const FEATURES = [
-  {
-    number: "01",
-    title: "Código limpio",
-    description:
-      "Escribimos software mantenible, escalable y fácil de evolucionar."
-  },
-  {
-    number: "02",
-    title: "Alto rendimiento",
-    description:
-      "Nuestros proyectos cargan rápido y están optimizados desde el inicio."
-  },
-  {
-    number: "03",
-    title: "SEO desde el primer día",
-    description:
-      "La estructura está preparada para posicionarse correctamente en Google."
-  },
-  {
-    number: "04",
-    title: "Tecnologías modernas",
-    description:
-      "Trabajamos con herramientas actuales para crear productos duraderos."
-  }
+import { Code2, Gauge, Search, Cpu } from "lucide-astro";
+
+export const FEATURES = [
+    {
+        number: "01",
+        icon: Code2,
+        title: "Código limpio",
+        description:
+            "Escribimos software mantenible, escalable y fácil de evolucionar.",
+    },
+    {
+        number: "02",
+        icon: Gauge,
+        title: "Alto rendimiento",
+        description:
+            "Nuestros proyectos cargan rápido y están optimizados desde el inicio.",
+    },
+    {
+        number: "03",
+        icon: Search,
+        title: "SEO desde el primer día",
+        description:
+            "La estructura está preparada para posicionarse correctamente en Google.",
+    },
+    {
+        number: "04",
+        icon: Cpu,
+        title: "Tecnologías modernas",
+        description:
+            "Trabajamos con herramientas actuales para crear productos duraderos.",
+    },
 ];
 ---
 
 <section id="trust">
-
     <Container>
-
         <SectionHeader
-            badge="¿Por qué NexoDevStudio?"
+            badge="Nuestros principios"
             title="Construimos software con estándares profesionales desde el primer proyecto."
-            description="Todavía estamos escribiendo nuestra historia, pero cada línea de código refleja la calidad con la que queremos ser reconocidos."
+            description="Aplicamos prácticas modernas de desarrollo para crear software rápido, escalable y preparado para crecer junto a tu negocio."
         />
 
         <div class="trust-grid">
-
             {
                 FEATURES.map((feature) => (
-
                     <article class="trust-card">
-
                         <span class="trust-number">
-
-                            {feature.number}
-
+                            {
+                                <feature.icon
+                                    class="mb-6 "
+                                    size={33}
+                                    strokeWidth={2}
+                                />
+                            }
                         </span>
 
-                        <h3>
+                        <h3 class="trust-title">{feature.title}</h3>
 
-                            {feature.title}
-
-                        </h3>
-
-                        <p>
-
-                            {feature.description}
-
-                        </p>
-
+                        <p class="trust-description">{feature.description}</p>
                     </article>
-
                 ))
             }
-
         </div>
-
     </Container>
-
 </section>

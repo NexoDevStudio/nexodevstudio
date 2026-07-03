@@ -1,41 +1,31 @@
 ---
-interface Props{
+interface Props {
+    badge: string;
 
-badge:string;
+    title: string;
 
-title:string;
-
-description:string;
-
+    description: string;
 }
 
-const{
+const {
+    badge,
 
-badge,
+    title,
 
-title,
-
-description
-
-}=Astro.props;
+    description,
+} = Astro.props;
 
 import Badge from "./Badge.astro";
 ---
 
 <div class="section-header">
+    <Badge text={badge} />
 
-<Badge text={badge}/>
+    <h2>
+        {title}
+    </h2>
 
-<h2>
-
-{title}
-
-</h2>
-
-<p>
-
-{description}
-
-</p>
-
+    <p>
+        {description}
+    </p>
 </div>

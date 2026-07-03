@@ -9,53 +9,31 @@ import SectionHeader from "../ui/SectionHeader.astro";
 ---
 
 <section id="services">
+    <Container>
+        <SectionHeader
+            badge="Servicios"
+            title="Creamos software pensado para crecer."
+            description="Nos enfocamos en desarrollar soluciones modernas con tecnologías rápidas, escalables y fáciles de mantener."
+        />
 
-<Container>
+        <div class="services-grid">
+            {
+                SERVICES.map((service) => {
+                    const Icon = service.icon;
 
-<SectionHeader
+                    return (
+                        <article class="card">
+                            <div class="mb-6">
+                                <Icon class="h-8 w-8 text-violet-400" />
+                            </div>
 
-badge="Servicios"
+                            <h3>{service.title}</h3>
 
-title="Creamos software pensado para crecer."
-
-description="Nos enfocamos en desarrollar soluciones modernas con tecnologías rápidas, escalables y fáciles de mantener."
-
-/>
-
-<div class="services-grid">
-
-{
-
-SERVICES.map(service=>(
-
-<Card>
-
-<div class="service-icon">
-
-{service.icon}
-
-</div>
-
-<h3>
-
-{service.title}
-
-</h3>
-
-<p>
-
-{service.description}
-
-</p>
-
-</Card>
-
-))
-
-}
-
-</div>
-
-</Container>
-
+                            <p>{service.description}</p>
+                        </article>
+                    );
+                })
+            }
+        </div>
+    </Container>
 </section>

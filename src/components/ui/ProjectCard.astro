@@ -11,8 +11,20 @@ const { project } = Astro.props;
 ---
 
 <article class="project-card">
+    <div class="project-placeholder">
+    <div class="browser-bar">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <div class="project-image">
+    <div class="placeholder-content">
+        <h4>{project.title}</h4>
+        <p>{project.category}</p>
+    </div>
+</div>
+
+    <!-- <div class="project-image">
 
         <img
             src={project.image}
@@ -20,9 +32,9 @@ const { project } = Astro.props;
             loading="lazy"
         />
 
-    </div>
+    </div> -->
 
-    <div class="project-content">
+    <!-- <div class="project-content">
 
         <span class="project-category">
 
@@ -92,6 +104,6 @@ const { project } = Astro.props;
 
         </div>
 
-    </div>
+    </div> -->
 
 </article>

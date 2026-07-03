@@ -1,14 +1,16 @@
+import { COMPANY } from "./company";
+
 export const CTA = {
   badge: "Hablemos",
 
-  title: "¿Listo para construir tu próximo proyecto?",
+  title: "Hablemos de tu próximo proyecto.",
 
   description:
-    "Cuéntanos tu idea y trabajemos juntos para convertirla en un producto digital rápido, moderno y preparado para crecer.",
+    "Cuéntanos tu idea y te ayudaremos a convertirla en un producto digital moderno, rápido y preparado para crecer.",
 
   primaryButton: {
     text: "Agendar una reunión",
-    href: "#contact"
+    href: `whatsapp://send?phone=${COMPANY.phone}&text=Hola,%20quiero%20agendar%20una%20reunión%20para%20hablar%20de%20mi%20proyecto.`
   },
 
   secondaryButton: {

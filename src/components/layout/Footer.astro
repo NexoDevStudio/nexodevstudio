@@ -2,137 +2,78 @@
 import Container from "../ui/Container.astro";
 import { COMPANY } from "../../data/company";
 import { FOOTER } from "../../data/footer";
+import Logo from "../ui/Logo.astro";
 ---
 
 <footer class="footer">
-
     <Container>
-
         <div class="footer-grid">
-
             <div>
-
                 <h3 class="footer-logo">
-
-                    {COMPANY.name}
-
+                    <Logo />
                 </h3>
 
                 <p>
-
                     {FOOTER.description}
-
                 </p>
-
             </div>
 
             <div>
-
-                <h4>
-
-                    Navegación
-
-                </h4>
+                <h4>Navegación</h4>
 
                 <ul>
-
                     {
-
-                        FOOTER.navigation.map((item)=>(
-
+                        FOOTER.navigation.map((item) => (
                             <li>
-
-                                <a href={item.href}>
-
-                                    {item.label}
-
-                                </a>
-
+                                <a href={item.href}>{item.label}</a>
                             </li>
-
                         ))
-
                     }
-
                 </ul>
-
             </div>
 
             <div>
-
-                <h4>
-
-                    Contacto
-
-                </h4>
+                <h4>Contacto</h4>
 
                 <p>
-
                     {FOOTER.email}
-
                 </p>
 
                 <p>
-
                     {FOOTER.location}
-
                 </p>
-
             </div>
 
             <div>
-
-                <h4>
-
-                    Síguenos
-
-                </h4>
+                <h4>Síguenos</h4>
 
                 <ul>
-
                     {
-
-                        FOOTER.socials.map((social)=>(
-
+                        FOOTER.socials.map((social) => (
                             <li>
-
-                                <a
-                                    href={social.url}
-                                    target="_blank"
-                                >
-
+                                <a href={social.url} target="_blank">
                                     {social.name}
-
                                 </a>
-
                             </li>
-
                         ))
-
                     }
-
                 </ul>
-
             </div>
-
         </div>
 
-        <div class="footer-bottom">
-
+        <div class="footer-bottom text-left">
             <span>
-
-                © {new Date().getFullYear()} {COMPANY.name}
-
+                © {new Date().getFullYear()} - Todos los derechos reservados.
             </span>
 
-            <span>
-
-                Construido con Astro + Tailwind.
-
+            <span class="footer-built-by">
+                Construido con <strong
+                    style={{ color: "red", fontSize: "1.3rem" }}
+                    >&hearts;</strong
+                >
+                por
+                <Logo variant="icon" />
             </span>
-
         </div>
-
     </Container>
-
 </footer>

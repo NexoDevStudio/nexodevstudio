@@ -1,43 +1,83 @@
 ---
 import "../styles/global.css";
+import { SEO } from "../data/seo";
 
-interface Props{
-
-title:string;
-
-description?:string;
-
+interface Props {
+    title?: string;
+    description?: string;
+    image?: string;
 }
 
-const{
+const {
+    title = SEO.title,
+    description = SEO.description,
+    image = SEO.image,
+} = Astro.props;
 
-title,
-
-description="NexoDevStudio"
-
-}=Astro.props;
+const canonical = SEO.url;
 ---
 
 <!doctype html>
-
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
 
-<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta charset="UTF-8"/>
+        <title>{title}</title>
 
-<meta name="viewport" content="width=device-width"/>
+        <meta name="description" content={description} />
 
-<title>{title}</title>
+        <meta name="author" content={SEO.author} />
 
-<meta name="description" content={description}/>
+        <meta name="keywords" content={SEO.keywords.join(", ")} />
 
-</head>
+        <meta name="theme-color" content="#09090b" />
 
-<body>
+        <meta name="robots" content="index,follow" />
 
-<slot/>
+        <link rel="canonical" href={canonical} />
 
-</body>
+        <!-- Open Graph -->
 
+        <meta property="og:type" content="website" />
+
+        <meta property="og:title" content={title} />
+
+        <meta property="og:description" content={description} />
+
+        <meta property="og:image" content={`${SEO.url}${image}`} />
+
+        <meta property="og:url" content={canonical} />
+
+        <!-- Twitter -->
+
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta name="twitter:title" content={title} />
+
+        <meta name="twitter:description" content={description} />
+
+        <meta name="twitter:image" content={`${SEO.url}${image}`} />
+
+        <link rel="icon" href="/favicon.svg" />
+
+        <link rel="manifest" href="/site.webmanifest" />
+
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "NexoDevStudio",
+                url: SEO.url,
+                logo: `${SEO.url}/favicon.svg`,
+                description: SEO.description,
+            })}
+        />
+    </head>
+
+    <body>
+        <slot />
+    </body>
 </html>
