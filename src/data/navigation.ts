@@ -1,13 +1,20 @@
 export const NAVIGATION = [
 
     {
-
+        
         label: "Inicio",
-
+        
         href: "#hero"
+        
+    },
+    {
+
+        label: "Principios",
+
+        href: "#principles"
 
     },
-
+    
     {
 
         label: "Servicios",
@@ -29,6 +36,13 @@ export const NAVIGATION = [
         label: "Proceso",
 
         href: "#process"
+
+    },
+    {
+
+        label: "¿Quienes Somos?",
+
+        href: "#aboutus"
 
     },
 

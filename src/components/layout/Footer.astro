@@ -1,6 +1,7 @@
 ---
 import Container from "../ui/Container.astro";
-import { COMPANY } from "../../data/company";
+import { NAVIGATION } from "../../data/navigation";
+
 import { FOOTER } from "../../data/footer";
 import Logo from "../ui/Logo.astro";
 ---
@@ -23,7 +24,7 @@ import Logo from "../ui/Logo.astro";
 
                 <ul>
                     {
-                        FOOTER.navigation.map((item) => (
+                        NAVIGATION.map((item) => (
                             <li>
                                 <a href={item.href}>{item.label}</a>
                             </li>

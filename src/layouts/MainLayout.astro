@@ -14,7 +14,7 @@ const {
     image = SEO.image,
 } = Astro.props;
 
-const canonical = SEO.url;
+const canonical = new URL(Astro.url.pathname, SEO.url).toString();
 ---
 
 <!doctype html>
@@ -33,8 +33,12 @@ const canonical = SEO.url;
         <meta name="keywords" content={SEO.keywords.join(", ")} />
 
         <meta name="theme-color" content="#09090b" />
-
+        <meta property="og:locale" content="es_CO" />
         <meta name="robots" content="index,follow" />
+        <meta property="og:site_name" content="NexoDevStudio" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <!-- <meta name="twitter:site" content="@NexoDevStudio" /> -->
 
         <link rel="canonical" href={canonical} />
 
@@ -63,16 +67,31 @@ const canonical = SEO.url;
         <link rel="icon" href="/favicon.svg" />
 
         <link rel="manifest" href="/site.webmanifest" />
-
         <script
             type="application/ld+json"
             set:html={JSON.stringify({
                 "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "NexoDevStudio",
-                url: SEO.url,
-                logo: `${SEO.url}/favicon.svg`,
-                description: SEO.description,
+                "@graph": [
+                    {
+                        "@type": "Organization",
+                        "@id": `${SEO.url}/#organization`,
+                        name: "NexoDevStudio",
+                        url: SEO.url,
+                        logo: `${SEO.url}/favicon.svg`,
+                        description: SEO.description,
+                    },
+                    {
+                        "@type": "WebSite",
+                        "@id": `${SEO.url}/#website`,
+                        url: SEO.url,
+                        name: "NexoDevStudio",
+                        description: SEO.description,
+                        inLanguage: "es-CO",
+                        publisher: {
+                            "@id": `${SEO.url}/#organization`,
+                        },
+                    },
+                ],
             })}
         />
     </head>

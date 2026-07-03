@@ -1,3 +1,5 @@
+import { NAVIGATION } from "./navigation";
+
 export const FOOTER = {
   description:
     "Construimos productos digitales rápidos, escalables y preparados para crecer.",
@@ -6,24 +8,7 @@ export const FOOTER = {
 
   location: "Andes, Antioquia · Colombia",
 
-  navigation: [
-    {
-      label: "Inicio",
-      href: "#hero"
-    },
-    {
-      label: "Servicios",
-      href: "#services"
-    },
-    {
-      label: "Proyectos",
-      href: "#projects"
-    },
-    {
-      label: "Proceso",
-      href: "#process"
-    }
-  ],
+  navigation: [],
 
   socials: [
     {
